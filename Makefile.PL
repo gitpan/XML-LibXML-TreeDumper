@@ -3,7 +3,7 @@
 use strict;
 use warnings;
 
-
+use 5.010001;
 
 use ExtUtils::MakeMaker ;
 
@@ -20,9 +20,10 @@ my %WriteMakefileArgs = (
   "LICENSE" => "artistic_2",
   "NAME" => "XML::LibXML::TreeDumper",
   "PREREQ_PM" => {
+    "Moo" => "1.006",
     "XML::LibXML" => 0
   },
-  "VERSION" => "0.01",
+  "VERSION" => "0.02",
   "test" => {
     "TESTS" => "t/*.t"
   }
@@ -30,6 +31,7 @@ my %WriteMakefileArgs = (
 
 
 my %FallbackPrereqs = (
+  "Moo" => "1.006",
   "XML::LibXML" => 0
 );
 
